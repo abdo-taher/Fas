@@ -18,9 +18,11 @@ class general_settingsController extends Controller
     public function edit(general_settingsRequest $request,$id){
 
         try {
-
             $update = general_settingsModel::find($id);
-            $update->update($request->except(['_token']));
+            if ($request->has('image')){
+                $update->update($request->except(['image'=>uploadeImage('company',$request->image)]));
+            }
+            $update->update($request->except(['_token','image']));
                 //      if done
             return redirect()->route('general_settings_view')->with(['success'=>'تم تعديل الاعدادات بنجاح']);
         }catch (Exception $exception){
@@ -30,13 +32,12 @@ class general_settingsController extends Controller
     }
 
     public function edit_view($slug){
-        $data = general_settingsModel::all()->where('company_name',$slug);
-        return view('general_settings.index');
+        $data = general_settingsModel::all()->where('company_name',$slug)->first();
+        return view('general_settings.edit',compact('data'));
     }
 
    public function edit_rules(general_settingsRequest $request,$id){
        try {
-
            $update = general_settingsModel::find($id);
            $update->update($request->except(['_token']));
            //      if done

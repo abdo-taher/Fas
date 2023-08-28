@@ -33,4 +33,9 @@ class loginController extends Controller
             return redirect()->route('login')->with(['fail'=>'خطا في اسم المستخدم او كلمة المرور ']);
         }
     }
+
+    public function logout(){
+        auth()->logout();
+        return view('auth.login');
+    }
 }

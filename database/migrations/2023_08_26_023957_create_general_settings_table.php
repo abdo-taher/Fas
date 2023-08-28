@@ -19,8 +19,10 @@ return new class extends Migration
             $table->string('phones',250);
             $table->string('address',250);
             $table->string('email',100);
-            $table->integer('added_by');
-            $table->integer('updated_by')->nullable();
+            $table->integer('added_by')->nullable()->unsigned();
+            $table->integer('updated_by')->nullable()->unsigned();
+            $table->foreign('added_by')->references('id')->on('admins')->onDelete('cascade');
+            $table->foreign('updated_by')->references('id')->on('admins')->onDelete('cascade');
             $table->integer('company_code');
             $table->decimal('after_minutes_calculate_delay',10,2)->default(0)->comment("بعد كم دقيقة نحسب تاخير حضور	");
             $table->decimal('after_minutes_calculate_early_departure',10,2)->default(0)->comment("بعد كم دقيقة نحسب انصراف مبكر	");

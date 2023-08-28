@@ -31,4 +31,11 @@ class adminModel extends Authenticatable
         }
     }
 
+//    public function whoEdit(){
+//        return $this->hasMany(general_settingsModel::class,'id','updated_by');
+//    }
+//    public function whoAdd(){
+//        return $this->hasMany(general_settingsModel::class,'id','added_by');
+//    }
+
 }

@@ -47,31 +47,36 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item has-treeview menu-open">
-                    <a href="#" class="nav-link active">
-                        <i class="nav-icon fas fa-th"></i>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-money-bill"></i>
                         <p>
-                            السنوات الماليه
+                            قسم الماليه
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./index.html" class="nav-link active">
+                            <a href="{{route('finance_calender')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v1</p>
+                                <p>السنوات الماليه</p>
                             </a>
                         </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            فروع الشركة
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./index2.html" class="nav-link">
+                            <a href="{{route('branches')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v2</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./index3.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v3</p>
+                                <p>قائمة الفروع</p>
                             </a>
                         </li>
                     </ul>
