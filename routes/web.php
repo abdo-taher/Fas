@@ -49,7 +49,7 @@ Route::group(['namespace'=>'Admin','prefix'=>'GeneralSettings'],function(){
         Route::post('/EditDone/{id?}','finance_cel_periodsController@editDone')->name('finance_cel_periods_editDone');
         Route::post('/EditRules/{id?}','finance_cel_periodsController@openOr')->name('finance_cel_periods_open');
     });
-    Route::group(['namespace'=>'Admin','prefix'=>'branches'],function(){
+    Route::group(['namespace'=>'Admin','prefix'=>'Branches'],function(){
         Route::get('/','branchesController@index')->name('branches');
         Route::get('/add','branchesController@add')->name('branches_add');
         Route::post('/addDone','branchesController@addDone')->name('branches_addDone');
@@ -57,6 +57,36 @@ Route::group(['namespace'=>'Admin','prefix'=>'GeneralSettings'],function(){
         Route::post('/EditDone/{id?}','branchesController@editDone')->name('branches_editDone');
         Route::get('/Active/{id?}','branchesController@active')->name('branches_active');
         Route::get('/Delete/{id?}','branchesController@delete')->name('branches_delete');
+    });
+    Route::group(['namespace'=>'Admin','prefix'=>'Shifts'],function(){
+        Route::get('/','shifts_typeController@index')->name('shifts');
+        Route::get('/add','shifts_typeController@add')->name('shifts_add');
+        Route::post('/addDone','shifts_typeController@addDone')->name('shifts_addDone');
+        Route::get('/Edit/{slug?}','shifts_typeController@edit')->name('shifts_edit');
+        Route::post('/EditDone/{id?}','shifts_typeController@editDone')->name('shifts_editDone');
+        Route::get('/Active/{id?}','shifts_typeController@active')->name('shifts_active');
+        Route::get('/Delete/{id?}','shifts_typeController@delete')->name('shifts_delete');
+        Route::post('/ajaxSearch','shifts_typeController@ajaxSearch')->name('ajaxSearch');
+    });
+    Route::group(['namespace'=>'Admin','prefix'=>'Departments'],function(){
+        Route::get('/','departmentController@index')->name('departments');
+        Route::get('/add','departmentController@add')->name('departments_add');
+        Route::post('/addDone','departmentController@addDone')->name('departments_addDone');
+        Route::get('/Edit/{slug?}','departmentController@edit')->name('departments_edit');
+        Route::post('/EditDone/{id?}','departmentController@editDone')->name('departments_editDone');
+        Route::get('/Active/{id?}','departmentController@active')->name('departments_active');
+        Route::get('/Delete/{id?}','departmentController@delete')->name('departments_delete');
+        Route::post('/ajaxSearch','departmentController@departments_Search')->name('departments_Search');
+    });
+    Route::group(['namespace'=>'Admin','prefix'=>'Job_Categories'],function(){
+        Route::get('/','job_categorieController@index')->name('job_categories');
+        Route::get('/add','job_categorieController@add')->name('job_categories_add');
+        Route::post('/addDone','job_categorieController@addDone')->name('job_categories_addDone');
+        Route::get('/Edit/{slug?}','job_categorieController@edit')->name('job_categories_edit');
+        Route::post('/EditDone/{id?}','job_categorieController@editDone')->name('job_categories_editDone');
+        Route::get('/Active/{id?}','job_categorieController@active')->name('job_categories_active');
+        Route::get('/Delete/{id?}','job_categorieController@delete')->name('job_categories_delete');
+        Route::post('/ajaxSearch','job_categorieController@ajaxSearch')->name('job_categoriesSearch');
     });
 });
 

@@ -31,52 +31,62 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="{{route('index')}}" class="nav-link">
-                        <i class="nav-icon fas fa-solar-panel"></i>
+                    <a href="{{route('index')}}" class="nav-link {{isActive("/")}}">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             لوحة التحكم
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{route('general_settings_view')}}" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+
+                <li class="nav-item has-treeview {{(request()->is('GeneralSettings') || request()->is('Finance_Calender') || request()->is('Branches') || request()->is('Shifts') || request()->is('Departments') || request()->is('Job_Categories') ? 'menu-open' : '')}}">
+
+
+                    <a href="#" class="nav-link {{(request()->is('GeneralSettings') || request()->is('Finance_Calender') || request()->is('Branches') || request()->is('Shifts') || request()->is('Departments') || request()->is('Job_Categories') ? 'active' : '')}}">
+                        <i class="nav-icon fas fa-stream"></i>
                         <p>
                             الضبط العام
-                            <span class="right badge badge-danger">جديد</span>
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-money-bill"></i>
-                        <p>
-                            قسم الماليه
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
+                    <ul class="nav nav-treeview ">
                         <li class="nav-item">
-                            <a href="{{route('finance_calender')}}" class="nav-link">
+                            <a href="{{route('general_settings_view')}}" class="nav-link {{isActive("GeneralSettings")}}">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    اعدادات الشركة
+                                    <span class="right badge badge-danger">جديد</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="{{route('finance_calender')}}" class="nav-link {{isActive("Finance_Calender")}}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>السنوات الماليه</p>
                             </a>
                         </li>
-                    </ul>
-                </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            فروع الشركة
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('branches')}}" class="nav-link">
+                            <a href="{{route('branches')}}" class="nav-link {{isActive("Branches")}}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>قائمة الفروع</p>
+                                <p>فروع الشركة</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('shifts')}}" class="nav-link {{isActive("Shifts")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>انواع فترات العمل</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('departments')}}" class="nav-link {{isActive("Departments")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>إداراة الموظفين</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('job_categories')}}" class="nav-link {{isActive("Job_Categories")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>انواع الوظائف</p>
                             </a>
                         </li>
                     </ul>

@@ -100,7 +100,7 @@
                                         @endif
                                     </td>
                                     <td class="project-actions text-right">
-                                        <a class="btn btn-primary btn-sm"  href="{{route('finance_calender_open',$conn->id)}}" >
+                                        <a class="btn btn-primary btn-sm isActive"  href="{{route('finance_calender_open',$conn->id)}}" >
                                             @if($conn->is_open == 1)
                                                 <i class="fas fa-folder-open" alt="غلق"></i>
                                             @else
@@ -144,14 +144,10 @@
 @section('finance_script')
 
 {{--    <script>--}}
-{{--        $(document).ready(function (){--}}
-{{--            $(document).on('click','.delete',function (){--}}
-{{--                var rel = confirm("هل انت متاكد من الحذف");--}}
-{{--                if(!rel){--}}
-{{--                    return false;--}}
-{{--                }--}}
-{{--            })--}}
-{{--            $(document).on('click','.showMonth',function (){--}}
+
+
+
+        {{--            $(document).on('click','.showMonth',function (){--}}
 {{--                var id =$(this).data('id');--}}
 {{--                jquery.ajax({--}}
 {{--                 url:'{{route('Months')}}',--}}

@@ -6,3 +6,9 @@ function uploadeImage($folder,$image){
     $fileName = $image -> hashName();
     return $fileName;
 }
+
+function isActive($requesta){
+   return (request()->is($requesta)) ? 'active' : '';
+}
+
+

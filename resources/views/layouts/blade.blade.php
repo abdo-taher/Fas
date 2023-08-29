@@ -53,10 +53,23 @@
   @yield('finance_calender_edit')
   <!-- . finance_cel_periods page content -->
   @yield('finance_cel_periods_index')
-  <!-- . finance_calender page content -->
+  <!-- . branches page content -->
   @yield('branches_index')
   @yield('branches_add')
   @yield('branches_edit')
+  <!-- /.content-wrapper -->
+  <!-- . shifts_type page content -->
+  @yield('shifts_index')
+  @yield('shifts_add')
+  @yield('shifts_edit')
+  <!-- . departments page content -->
+  @yield('departments_index')
+  @yield('departments_add')
+  @yield('departments_edit')
+  <!-- . job_categories page content -->
+  @yield('job_categories_index')
+  @yield('job_categories_add')
+  @yield('job_categories_edit')
 <!-- /.content-wrapper -->
 </div>
 
@@ -95,11 +108,28 @@
 <!-- AdminLTE App -->
 <script src="{{asset('assets/dist/js/adminlte.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{asset('assets/dist/js/pages/dashboard.js')}}"></script>
+{{--<script src="{{asset('assets/dist/js/pages/dashboard.js')}}"></script>--}}
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('assets/dist/js/demo.j')}}s"></script>
+<script>
+    $(document).ready(function (){
+        $(document).on('click','.delete',function (){
+            var rel = confirm("هل انت متاكد من الحذف");
+            if(!rel){
+                return false;
+            }
+        })
+        $(document).on('click','.isActive',function (){
+            var rel = confirm("هل انت متاكد من ذللك");
+            if(!rel){
+                return false;
+            }
+        })
+    })
+</script>
 
 @yield('finance_script')
+@yield('searchScript')
 
 </body>
 </html>
