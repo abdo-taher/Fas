@@ -70,7 +70,82 @@
   @yield('job_categories_index')
   @yield('job_categories_add')
   @yield('job_categories_edit')
-<!-- /.content-wrapper -->
+  <!-- /.content-wrapper -->
+  <!-- . qualifications page content -->
+  @yield('qualifications_index')
+  @yield('qualifications_add')
+  @yield('qualifications_edit')
+  <!-- /.content-wrapper -->
+  <!-- . qualif_type page content -->
+  @yield('qualif_type_index')
+  @yield('qualif_type_add')
+  @yield('qualif_type_edit')
+  <!-- /.content-wrapper -->
+  <!-- . occasions page content -->
+  @yield('occasions_index')
+  @yield('occasions_add')
+  @yield('occasions_edit')
+  <!-- /.content-wrapper -->
+  <!-- . resignations page content -->
+  @yield('resignations_index')
+  @yield('resignations_add')
+  @yield('resignations_edit')
+  <!-- /.content-wrapper -->
+  <!-- . nationality page content -->
+  @yield('nationalitys_index')
+  @yield('nationalitys_add')
+  @yield('nationalitys_edit')
+  <!-- /.content-wrapper -->
+  <!-- . job_categories page content -->
+  @yield('religions_index')
+  @yield('religions_add')
+  @yield('religions_edit')
+  <!-- /.content-wrapper -->
+  <!-- . job_categories page content -->
+  @yield('blood_types_index')
+  @yield('blood_types_add')
+  @yield('blood_types_edit')
+  <!-- /.content-wrapper -->
+  <!-- . job_categories page content -->
+  @yield('marital_status_index')
+  @yield('marital_status_add')
+  @yield('marital_status_edit')
+  <!-- /.content-wrapper -->
+  <!-- . job_categories page content -->
+  @yield('military_services_index')
+  @yield('military_services_add')
+  @yield('military_services_edit')
+  <!-- /.content-wrapper -->
+    <!-- . driving_license page content -->
+  @yield('driving_licenses_index')
+  @yield('driving_licenses_add')
+  @yield('driving_licenses_edit')
+  <!-- /.content-wrapper -->
+    <!-- . graduation_estimate page content -->
+  @yield('graduation_estimates_index')
+  @yield('graduation_estimates_add')
+  @yield('graduation_estimates_edit')
+  <!-- /.content-wrapper -->
+    <!-- . country page content -->
+  @yield('countrys_index')
+  @yield('countrys_add')
+  @yield('countrys_edit')
+  <!-- /.content-wrapper -->
+    <!-- . governorates page content -->
+  @yield('governorates_index')
+  @yield('governorates_add')
+  @yield('governorates_edit')
+  <!-- /.content-wrapper -->
+    <!-- . centers page content -->
+  @yield('centers_index')
+  @yield('centers_add')
+  @yield('centers_edit')
+  <!-- /.content-wrapper -->
+    <!-- . languages page content -->
+  @yield('languages_index')
+  @yield('languages_add')
+  @yield('languages_edit')
+  <!-- /.content-wrapper -->
 </div>
 
 @include('layouts.footer')

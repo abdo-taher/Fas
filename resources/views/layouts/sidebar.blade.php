@@ -39,11 +39,11 @@
                     </a>
                 </li>
 
-                <li class="nav-item has-treeview {{(request()->is('GeneralSettings') || request()->is('Finance_Calender') || request()->is('Branches') || request()->is('Shifts') || request()->is('Departments') || request()->is('Job_Categories') ? 'menu-open' : '')}}">
+                <li class="nav-item has-treeview {{(request()->is('GeneralSettings') || request()->is('Finance_Calender') || request()->is('Branches') || request()->is('Shifts') || request()->is('Departments') || request()->is('Job_Categories') || request()->is('Qualifications') || request()->is('Qualifications_types') || request()->is('Occasions') || request()->is('Resignations') || request()->is('Nationalitys') || request()->is('Religions') || request()->is('Blood_types') || request()->is('Marital_status') || request()->is('Languages') || request()->is('Centers') || request()->is('Governorates') || request()->is('Countrys') || request()->is('Graduation_estimates') || request()->is('Driving_licenses') ? 'menu-open' : '')}}">
 
 
-                    <a href="#" class="nav-link {{(request()->is('GeneralSettings') || request()->is('Finance_Calender') || request()->is('Branches') || request()->is('Shifts') || request()->is('Departments') || request()->is('Job_Categories') ? 'active' : '')}}">
-                        <i class="nav-icon fas fa-stream"></i>
+                    <a href="#" class="nav-link {{(request()->is('GeneralSettings') || request()->is('Finance_Calender') || request()->is('Branches') || request()->is('Shifts') || request()->is('Departments') || request()->is('Job_Categories') || request()->is('Qualifications') || request()->is('Qualifications_types') || request()->is('Occasions') || request()->is('Resignations') || request()->is('Nationalitys') || request()->is('Religions') || request()->is('Blood_types') || request()->is('Marital_status') || request()->is('Languages') || request()->is('Centers') || request()->is('Governorates') || request()->is('Countrys') || request()->is('Graduation_estimates') || request()->is('Driving_licenses') ? 'active' : '')}}">
+                        <i class="nav-icon ion ion-clipboard"></i>
                         <p>
                             الضبط العام
                             <i class="right fas fa-angle-left"></i>
@@ -89,6 +89,91 @@
                                 <p>انواع الوظائف</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('qualif_types')}}" class="nav-link {{isActive("Qualifications_types")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>انواع المؤهلات الدراسية</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('qualifications')}}" class="nav-link {{isActive("Qualifications")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>المؤهلات الدراسية </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('occasions')}}" class="nav-link {{isActive("Occasions")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>العطلات الرسمية </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('resignations')}}" class="nav-link {{isActive("Resignations")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>انواع ترك العمل</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('nationalitys')}}" class="nav-link {{isActive("Nationalitys")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>جنسيات الموظفين</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('religions')}}" class="nav-link {{isActive("Religions")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> الديانات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('blood_types')}}" class="nav-link {{isActive("Blood_types")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>فصائل الدم</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('marital_status')}}" class="nav-link {{isActive("Marital_status")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>الحاله الاجتماعية</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('driving_licenses')}}" class="nav-link {{isActive("Driving_licenses")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>انواع رخصة القيادة</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('graduation_estimates')}}" class="nav-link {{isActive("Graduation_estimates")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>انواع التقدير</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('countrys')}}" class="nav-link {{isActive("Countrys")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>الدول</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('governorates')}}" class="nav-link {{isActive("Governorates")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>محافظات الدول</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('centers')}}" class="nav-link {{isActive("Centers")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>مراكز المحافظات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('languages')}}" class="nav-link {{isActive("Languages")}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>اللغات</p>
+                            </a>
+                        </li>
+
                     </ul>
                 </li>
             </ul>

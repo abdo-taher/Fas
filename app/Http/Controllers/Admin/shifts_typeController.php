@@ -15,7 +15,7 @@ class shifts_typeController extends Controller
 {
     public function index(){
         $com_code = auth()->user()->company_code;
-        $data = shitfts_typeModel::where('com_code',$com_code)->paginate(1);
+        $data = shitfts_typeModel::where('com_code',$com_code)->paginate(5);
         return view('shifts.index',compact('data'));
     }
 
