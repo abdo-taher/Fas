@@ -23,6 +23,7 @@ return new class extends Migration
             $table->integer('com_code');
             $table->timestamps();
         });
+
     }
 
     /**

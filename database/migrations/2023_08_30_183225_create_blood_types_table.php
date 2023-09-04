@@ -20,6 +20,45 @@ return new class extends Migration
             $table->integer('com_code');
             $table->timestamps();
         });
+        \Illuminate\Support\Facades\DB::table('blood_types')->insert([
+            [
+                'name' => 'A+',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ] ,
+            [
+                'name' => 'A-',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ] ,
+            [
+                'name' => 'B+',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ],
+            [
+                'name' => 'B-',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ] ,
+            [
+                'name' => 'O+',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ],
+            [
+                'name' => 'O-',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ]
+
+        ]);
     }
 
     /**

@@ -20,6 +20,21 @@ return new class extends Migration
             $table->integer('com_code');
             $table->timestamps();
         });
+        \Illuminate\Support\Facades\DB::table('driving_licenses')->insert([
+            [
+                'name' => 'مهنية',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ] ,
+            [
+                'name' => 'خاصة',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ] ,
+
+        ]);
     }
 
     /**

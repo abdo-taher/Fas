@@ -20,6 +20,28 @@ return new class extends Migration
             $table->integer('com_code');
             $table->timestamps();
         });
+        \Illuminate\Support\Facades\DB::table('resignations')->insert([
+            [
+                'name' => 'الفصل',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ] ,
+            [
+                'name' => 'الوفاة',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ] ,[
+                'name' => 'المعاش',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ]
+
+
+
+        ]);
     }
 
     /**

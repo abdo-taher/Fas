@@ -20,6 +20,28 @@ return new class extends Migration
             $table->integer('com_code');
             $table->timestamps();
         });
+        \Illuminate\Support\Facades\DB::table('languages')->insert([
+            [
+                'name' => 'العربية',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ]
+            ,[
+                'name' => 'الانجليزية',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ] ,
+            [
+                'name' => 'الفرنسية',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ]
+
+
+        ]);
     }
 
     /**

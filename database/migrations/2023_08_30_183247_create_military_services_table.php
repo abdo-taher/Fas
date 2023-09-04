@@ -20,6 +20,27 @@ return new class extends Migration
             $table->integer('com_code');
             $table->timestamps();
         });
+        \Illuminate\Support\Facades\DB::table('military_services')->insert([
+           [
+               'name' => 'ادي الخدمة العسكرية',
+               'active' => '1',
+               'added_by' => '1',
+               'com_code' => '1',
+           ] ,
+            [
+                'name' => 'اعفاء',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ] ,
+            [
+                'name' => 'مؤجل',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ]
+
+        ]);
     }
 
     /**

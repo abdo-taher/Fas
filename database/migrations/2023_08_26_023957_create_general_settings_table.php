@@ -38,6 +38,15 @@ return new class extends Migration
             $table->decimal('sanctions_value_forth_absence',10,2)->default(0)->comment("قيمة خصم الايام بعد رابع مرة غياب بدون اذن	");
             $table->timestamps();
         });
+        \Illuminate\Support\Facades\DB::table('general_settings')->insert([
+            "company_name" => 'Enter',
+            "phones" => '000000000',
+            "address" => 'Address',
+            "email" => 'admin@admin',
+            "added_by" => '1',
+            "company_code" => 1,
+
+        ]);
     }
 
     /**

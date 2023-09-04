@@ -27,7 +27,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <!-- Bootstrap 4 RTL -->
-  <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{asset('assets/plugins/rtl/bootstrap.min.css')}}">
   <!-- Custom style for RTL -->
   <link rel="stylesheet" href="{{asset('assets/dist/css/custom.css')}}">
 </head>
@@ -146,6 +146,13 @@
   @yield('languages_add')
   @yield('languages_edit')
   <!-- /.content-wrapper -->
+  <!-- . Employees page content -->
+  @yield('employees_index')
+  @yield('employees_detalis')
+  @yield('employees_add')
+  @yield('employees_edit')
+  <!-- /.content-wrapper -->
+
 </div>
 
 @include('layouts.footer')
@@ -159,7 +166,7 @@
   $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 rtl -->
-<script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js"></script>
+<script src="{{asset('assets/plugins/rtl/bootstrap.min.js')}}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{asset('assets/plugins/bootstrap/js/bootstrap.bundle.js')}}"></script>
 <!-- ChartJS -->

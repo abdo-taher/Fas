@@ -45,7 +45,19 @@ return [
         ],
         'company' => [
             'driver' => 'local',
-            'root' => storage_path('app/assets/image/company'),
+            'root' => 'C:\xampp\htdocs\Fas\assets\image\company',
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'Photo' => [
+            'driver' => 'local',
+            'root' => 'C:\xampp\htdocs\Fas\assets\image\users',
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'Cv' => [
+            'driver' => 'local',
+            'root' => 'C:\xampp\htdocs\Fas\assets\file\users',
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],

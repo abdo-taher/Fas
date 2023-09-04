@@ -11,52 +11,40 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('nationalitys', function (Blueprint $table) {
+        Schema::create('disabilities_processes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
             $table->tinyInteger('active')->default(1);
             $table->integer('added_by');
-            $table->integer('updated_by')->nullable();
+            $table->integer('updated_bu')->nullable();
             $table->integer('com_code');
             $table->timestamps();
         });
-        \Illuminate\Support\Facades\DB::table('nationalitys')->insert([
+        \Illuminate\Support\Facades\DB::table('disabilities_processes')->insert([
             [
-                'name' => 'مصري',
+                'name' => 'اعاقة بصرية',
                 'active' => '1',
                 'added_by' => '1',
                 'com_code' => '1',
             ] ,
             [
-                'name' => 'عراقي',
-                'active' => '1',
-                'added_by' => '1',
-                'com_code' => '1',
-            ] ,[
-                'name' => 'سعودي',
+                'name' => 'اعاقة حسية',
                 'active' => '1',
                 'added_by' => '1',
                 'com_code' => '1',
             ] ,
             [
-                'name' => 'سوري',
+                'name' => 'اعاقة سمعية',
                 'active' => '1',
                 'added_by' => '1',
                 'com_code' => '1',
-            ] ,[
-                'name' => 'اردني',
-                'active' => '1',
-                'added_by' => '1',
-                'com_code' => '1',
-            ] ,
+            ],
             [
-                'name' => 'مغربي',
+                'name' => 'اعاقة حركية',
                 'active' => '1',
                 'added_by' => '1',
                 'com_code' => '1',
-            ] ,
-
-
+            ]
 
         ]);
     }
@@ -66,6 +54,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('nationalitys');
+        Schema::dropIfExists('disabilities_processes');
     }
 };

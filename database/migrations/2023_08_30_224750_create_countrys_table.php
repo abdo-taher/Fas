@@ -20,6 +20,33 @@ return new class extends Migration
             $table->integer('com_code');
             $table->timestamps();
         });
+        \Illuminate\Support\Facades\DB::table('countrys')->insert([
+            [
+                'name' => 'مصر',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ]
+            ,[
+                'name' => 'السعودية',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ] ,
+            [
+                'name' => 'الاردن',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ] ,[
+                'name' => 'المغرب',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ],
+
+
+        ]);
     }
 
     /**

@@ -176,6 +176,60 @@
 
                     </ul>
                 </li>
+                <li class="nav-item has-treeview {{(request()->is('Employees') ? 'menu-open' : '')}}">
+
+
+                    <a href="#" class="nav-link {{(request()->is('Employees') ? 'active' : '')}}">
+                        <i class="nav-icon ion ion-clipboard"></i>
+                        <p>
+                            بيانات الموظفين
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview ">
+                        <li class="nav-item">
+                            <a href="{{route('employees')}}" class="nav-link {{isActive("Employees")}}">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                     بيانات الموظفين الادارة
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('employees')}}" class="nav-link {{isActive("")}}">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    انواع الاضافي للراتب
+                                    <span class="right badge badge-danger">جديد</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('employees')}}" class="nav-link {{isActive("")}}">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    انواع الخصم للراتب
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('employees')}}" class="nav-link {{isActive("")}}">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    انواع البدلات للراتب
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('employees')}}" class="nav-link {{isActive("")}}">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    هواتف الموظفين
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

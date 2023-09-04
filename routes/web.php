@@ -179,13 +179,6 @@ Route::group(['namespace'=>'Admin','prefix'=>'GeneralSettings'],function(){
         Route::post('/ajaxSearch','military_servicescontroller@military_servicesSearch')->name('military_servicesSearch');
     });
 
-//    driving_licenses
-//    graduation_estimates
-//    countrys
-//    governorates
-//    centers
-//    languages
-
     Route::group(['namespace'=>'Admin','prefix'=>'Driving_licenses'],function(){
         Route::get('/','driving_licensescontroller@index')->name('driving_licenses');
         Route::get('/add','driving_licensescontroller@add')->name('driving_licenses_add');
@@ -245,6 +238,20 @@ Route::group(['namespace'=>'Admin','prefix'=>'GeneralSettings'],function(){
         Route::get('/Active/{id?}','languagescontroller@active')->name('languages_active');
         Route::get('/Delete/{id?}','languagescontroller@delete')->name('languages_delete');
         Route::post('/ajaxSearch','languagescontroller@languagesSearch')->name('languagesSearch');
+    });
+
+//    Employees
+
+    Route::group(['namespace'=>'Admin','prefix'=>'Employees'],function(){
+        Route::get('/','employeescontroller@index')->name('employees');
+        Route::get('/Users{code?}','employeescontroller@details')->name('employees_son');
+        Route::get('/add','employeescontroller@add')->name('employees_add');
+        Route::post('/addDone','employeescontroller@addDone')->name('employees_addDone');
+        Route::get('/Edit/{code?}','employeescontroller@edit')->name('employees_edit');
+        Route::post('/EditDone/{id?}','employeescontroller@editDone')->name('employees_editDone');
+        Route::get('/Active/{id?}','employeescontroller@active')->name('employees_active');
+        Route::get('/Delete/{id?}','employeescontroller@delete')->name('employees_delete');
+        Route::post('/ajaxSearch','employeescontroller@employeesSearch')->name('employeesSearch');
     });
 });
 

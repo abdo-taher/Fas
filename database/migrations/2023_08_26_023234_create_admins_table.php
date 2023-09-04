@@ -23,6 +23,13 @@ return new class extends Migration
             $table->tinyInteger('is_active')->default(1);
             $table->timestamps();
         });
+        \Illuminate\Support\Facades\DB::table('admins')->insert([
+            "username" => 'abdo22',
+            "email" => 'admin@admin',
+            "password" => bcrypt('10123'),
+            "company_code" => 1,
+            "role_as" => 0,
+        ]);
     }
 
     /**

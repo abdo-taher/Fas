@@ -20,6 +20,57 @@ return new class extends Migration
             $table->integer('com_code');
             $table->timestamps();
         });
+        \Illuminate\Support\Facades\DB::table('qualif_types')->insert([
+            [
+                'name' => 'داكتوراه',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ] ,
+            [
+                'name' => 'ماجستير',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ] ,[
+                'name' => 'بكالوريوس',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ],[
+                'name' => 'ليسانس',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ],[
+                'name' => 'فوق المتوسط (معهد)',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ],[
+                'name' => 'ثانوية او مايعادلها',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ],[
+                'name' => 'اعدادية',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ],[
+                'name' => 'ابتدائي',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ],[
+                'name' => 'لم يحصل علي شيئ',
+                'active' => '1',
+                'added_by' => '1',
+                'com_code' => '1',
+            ]
+
+
+        ]);
     }
 
     /**

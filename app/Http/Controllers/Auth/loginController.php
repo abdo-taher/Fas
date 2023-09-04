@@ -12,7 +12,7 @@ class loginController extends Controller
     public function login(){
         return view('auth.login');
 
-
+//
 //        $admin = new adminModel();
 //        $admin->username = 'abdo22';
 //        $admin->email = 'abdotaher@gmail.com';

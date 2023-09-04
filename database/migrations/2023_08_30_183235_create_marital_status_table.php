@@ -20,6 +20,30 @@ return new class extends Migration
             $table->integer('com_code');
             $table->timestamps();
         });
+        \Illuminate\Support\Facades\DB::table('marital_status')->insert([
+            [
+                'name' => 'اعزب',
+                'added_by' => 1,
+                'com_code' => 1,
+            ],[
+                'name' => 'متزوج',
+                'added_by' => 1,
+                'com_code' => 1,
+            ],[
+                'name' => 'مطلق',
+                'added_by' => 1,
+                'com_code' => 1,
+            ],[
+                'name' => 'ارمل',
+                'added_by' => 1,
+                'com_code' => 1,
+            ],[
+                'name' => 'مخطوب',
+                'added_by' => 1,
+                'com_code' => 1,
+            ]
+
+        ]);
     }
 
     /**
